@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import web.entity.Users;
 import web.model.Car;
 import web.service.Service;
 
@@ -30,6 +31,14 @@ public class CarControler {
 
         model.addAttribute("cars", cars1);
         return "cars";
+    }
+    @GetMapping("/users")
+    public String getUsers(Model model) {
+
+        List<Users> users = service.getallUsers();
+
+        model.addAttribute("users", users);
+        return "users";
     }
 
 
