@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loop</title>
+</head>
+<body>
+<header>
+  <h2>racing</h2>
+</header>
+<table border="1">
+  <tr>
+    <th>Brand_name</th>
+    <th>Model</th>
+    <th>Year</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:if="${cars.isEmpty()}">
+    <td colspan="3"> No Cars Available </td>
+  </tr>
+  <tr th:each="car : ${cars}">
+    <td th:utext="${car.brand_name}">Brand_name</td>
+    <td th:utext="${car.model}">Model</td>
+    <td th:utext="${car.year}">Year</td>
+  </tr>
+</table>
+</body>
+</html>
+
+
