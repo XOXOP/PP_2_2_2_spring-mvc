@@ -47,7 +47,6 @@ public class Service1 implements Service{
         Car car3 = new Car("RAF", "2203", 1976);
         Car car4 = new Car("Plymout", "Fury", 1957);
         Car car5 = new Car("Plymout", "Superbird", 1970);
-        cars.add(car1);
         cars.add(car2);
         cars.add(car3);
         cars.add(car4);
